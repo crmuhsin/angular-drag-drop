@@ -8,9 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './app/material-module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
-import { DragComponent } from './app/drag/drag.component';
-import { DropComponent } from './app/drop/drop.component';
-import { ParentComponent } from './app/parent/parent.component';
+import { DragModule } from './app/app-drag-drop/add-drag.module';
+import { AppComponent } from './app/app.component';
 
 // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
 // `legacy` and `standard` appearances are scheduled for deprecation in version 10.
@@ -23,11 +22,11 @@ import { ParentComponent } from './app/parent/parent.component';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragModule
   ],
-  entryComponents: [DragComponent, DropComponent, ParentComponent],
-  declarations: [DragComponent, DropComponent, ParentComponent],
-  bootstrap: [DragComponent, DropComponent, ParentComponent],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
   providers: [
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
